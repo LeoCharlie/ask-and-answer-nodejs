@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    	<head>
+    		<meta charset="utf-8">
+    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    		<meta name="author" content="">
+    		<title></title>
+    		<link href="css/bootstrap.min.css" rel="stylesheet">
+    		<link rel="stylesheet" type="text/css" href="all.css"/>
+    	</head>
+    	<body>
+    		<!--导航栏-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-title">
+						<span id="goBack" class="glyphicon glyphicon-chevron-left pull-left"></span>
+					      Answer
+					    <span id="register" class="glyphicon glyphicon-ok-sign pull-right"></span>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!--提问表单-->
+		<div class="container">
+			<form action="/question/answer">
+				<div class="form-group">
+					<textarea name="content" class="form-control" rows="5" cols="" placeholder="Answer this questions"></textarea>
+				</div>
+				<input type="submit" class="btn btn-success form-control" name="" id="" value="Answer" />
+			</form>
+		</div>
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    	<div class="modal-dialog">
+	    		<div class="modal-content">
+	    			<div class="modal-header">
+	    				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    				<h4 class="modal-title" id="myModalLabel">Registration tips</h4>
+	    			</div>
+	    			<div class="modal-body"></div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	    			</div>
+	    		</div>
+	    	</div>
+		</div>
+    	</body>
+    	<script src="js/jquery.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="script/answer.js"></script>
+</html>

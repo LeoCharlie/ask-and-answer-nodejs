@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" name="" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+		<meta name="author" content="lct"/>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="all.css"/>
+		<title>Register</title>
+	</head>
+	<body>
+		<!--导航栏-->
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-title">
+						<span id="goBack" class="glyphicon glyphicon-chevron-left pull-left"></span>
+					      Register
+					    <span id="home" class="glyphicon glyphicon-home pull-right"></span>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<!--注册表单-->
+		<div class="container">
+			<form action="/user/register" method="post" class="form-horizontal" style="padding: 15px;">
+				<!--账号-->
+				<div class="form-group">
+					<label for="username">USER:</label>
+					<input type="text" class="form-control" name="username" id="username" required 
+						pattern="^[a-zA-Z0-9\u4e00-\u9fa5]{2,10}$" placeholder="Please Input Username"/> 
+				</div>
+				<!--密码-->
+				<div class="form-group">
+					<label for="password">PASSWORD:</label>
+					<input type="password" class="form-control" name="password" id="password" required 
+						pattern="^.{6,16}$" placeholder="Please Enter Your password"/> 
+				</div>
+				<!--确认密码-->
+				<div class="form-group">
+					<label for="re-password">Re-Enter PWD:</label>
+					<input type="password" class="form-control" name="re-password" id="re-password" required 
+						pattern="^.{6,16}$" placeholder="Please Re-Enter Your password"/> 
+				</div>
+				<!--性别(name一样才能单选)-->
+				<div class="checkbox form-group">
+					<p style="font-weight: bold; font-size: 16px;">Gender</p>
+					<label for="male" style="margin-left: 100px;">Male</label>
+						<input type="radio" name="isMale" id="male" value="" value="true" checked/>	
+					<label for="female" style="margin-left: 50px;">Female</label>
+						<input type="radio" name="isMale" id="female" value="false"/>	
+				</div><br />
+				<!--邮箱-->
+				<div class="form-group">
+					<input type="email" class="form-control" name="email" id="emailok" value="" required
+					pattern="^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$" placeholder="Please Enter Your Email"/>
+				</div>
+				<!--学科分类-->
+				<div class="form-group">
+					<select name="course" class="form-control">
+						<option value="HTML5">HTML5</option>
+						<option value="HTML5">JavaScript</option>
+						<option value="HTML5">C++</option>
+						<option value="HTML5">Python</option>
+						<option value="HTML5">VR</option>
+						<option value="HTML5">GO</option>
+					</select>
+				</div>
+				<!--提交按钮-->
+				<input type="submit" class="btn btn-success" name="" id="" value="Submit" />
+			</form>
+		</div>
+		
+
+		<!-- 模态框（Modal） -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	    	<div class="modal-dialog">
+	    		<div class="modal-content">
+	    			<div class="modal-header">
+	    				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	    				<h4 class="modal-title" id="myModalLabel">Registration tips</h4>
+	    			</div>
+	    			<div class="modal-body"></div>
+	    			<div class="modal-footer">
+	    				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	    			</div>
+	    		</div>
+	    	</div>
+		</div>
+	</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="script/register.js"></script>
+</html>
